@@ -34,7 +34,9 @@ then configure git so you have it ready for later
 git config --global user.name "Taco Research"
 ```
 
-```    git config --global user.email "labs@tacoresearch.org" ```
+```
+git config --global user.email "labs@tacoresearch.org"
+```
 
  #4 - open the folder in vscode and make any changes as necessary, perhaps adding a new machine hardware config, etc.
 ```
