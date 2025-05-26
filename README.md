@@ -45,7 +45,9 @@ code ./NIXPS/
 
 
  #5 - when ready, test it! use a terminal from within /NIXPS/ folder. 
+
 ```
+ nix flake update
  sudo nixos-rebuild boot --flake .#nixps
 ```
 

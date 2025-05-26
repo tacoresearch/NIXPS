@@ -2,12 +2,15 @@
 {config, pkgs, ... }:
 
 {
+#enable greeter program
+services.greetd.enable
+
 # #Enabling hyprlnd on NixOS------------------------------------------------------
-# programs.hyprland = {
-#   enable = true;
-# #  nvidiaPatches = true;
-#   xwayland.enable = true;
-# };
+programs.hyprland = {
+  enable = true;
+#  nvidiaPatches = true;
+  xwayland.enable = true;
+};
 
 # environment.sessionVariables = {
 #  # If your cursor becomes invisible

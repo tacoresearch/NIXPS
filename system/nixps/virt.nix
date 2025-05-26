@@ -16,6 +16,10 @@
     gnome.adwaita-icon-theme
   ];
   
+#gcis users
+ users.users.gcis.group = "gcis";
+       users.groups.gcis = {};
+
   virtualisation = {
     libvirtd = {
       enable = true;

@@ -8,7 +8,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       #./virt.nix
-      #./hyperland.nix
+      ./hyperland.nix
     ];
 
 
