@@ -6,6 +6,8 @@
   imports = [
 #    ../../home/blackbox.nix
   
+    ];
+  
   ];
 
   news.display = "show";
