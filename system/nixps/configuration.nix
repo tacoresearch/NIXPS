@@ -7,7 +7,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      #./virt.nix
+      #./hyperland.nix
     ];
+
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -41,6 +44,10 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
+
+
+  #allow flakes and nix-command
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -121,6 +128,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 
 }

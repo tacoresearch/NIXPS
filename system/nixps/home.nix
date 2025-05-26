@@ -5,6 +5,7 @@
 }: {
   imports = [
 #    ../../home/blackbox.nix
+  
   ];
 
   news.display = "show";
@@ -41,4 +42,5 @@
 
   programs.home-manager.enable = true;
   home.stateVersion = "25.05";
+
 }

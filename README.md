@@ -2,7 +2,7 @@
 
  #1 - Do a fresh install of nixos  
  
- #2 - edit configuration.nix to add: git, direnv, vscode, chromium. 
+ #2 - edit configuration.nix (on your clean nixos) to add: git, direnv, vscode, chromium, then do a rebuild.
 
  ```
  # packages
