@@ -3,7 +3,7 @@
 
 {
 #enable greeter program
-services.greetd.enable = true
+services.greetd.enable = true;
 
 # #Enabling hyprlnd on NixOS------------------------------------------------------
 programs.hyprland = {

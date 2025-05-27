@@ -8,7 +8,7 @@
   
     ];
   
-  ];
+};
 
   news.display = "show";
 
