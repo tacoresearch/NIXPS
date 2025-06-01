@@ -9,7 +9,7 @@
       ./hardware-configuration.nix
       #./test/virt.nix
       ./hyperland.nix
-     # ./test/waybar.nix
+      ./test/waybar.nix
     ];
 
 
