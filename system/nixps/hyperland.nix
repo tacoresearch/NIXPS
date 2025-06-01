@@ -1,42 +1,54 @@
+{ config, pkgs, lib, ... }:
 
-{config, pkgs, ... }:
+let
+  inherit (lib.strings) concatStringsSep;
+  inherit (lib.meta) getExe;
+
+  defaultSession = {
+    user = "greeter";
+    command = concatStringsSep " " [
+      (getExe pkgs.greetd.tuigreet)
+      "--time"
+      "--time-format '%I:%M %p | %a • %h | %F'"
+      "--cmd Hyprland"
+      "--remember"
+      "--remember-user-session"
+      "--asterisks"
+    ];
+  };
+in
 
 {
-#enable greeter program
-services.greetd.enable = true;
+  # Move greetd service configuration to the top level
+  services.greetd = {
+    enable = true;
+    vt = 2;
+    settings = {
+      default_session = defaultSession;
+    };
+  };
 
-# #Enabling hyprlnd on NixOS------------------------------------------------------
-programs.hyprland = {
-  enable = true;
-#  nvidiaPatches = true;
-  xwayland.enable = true;
-};
+  # Enable Hyprland at the top level
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
 
-# environment.sessionVariables = {
-#  # If your cursor becomes invisible
-#   WLR_NO_HARDWARE_CURSORS = "1";
-#  # Hint electron apps to use wayland
-#   NIXOS_OZONE_WL = "1";
-# };
+  # Other configurations can also stay at the top level
 
-# hardware = {
-# #    Opengl
-#     opengl.enable = true;
-
-#  #   Most wayland compositors need this
-#   #  nvidia.modesetting.enable = true;
-# };
 
 # #waybar
 # pkgs.waybar
+# [
+# #waybay environment system packages
+# environment.systemPackages = []
+# (pkgs.waybar.overrideAttrs (oldAttrs: {
+#     mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+#   })
+# )
 
-# # #waybay environment system packages
-# # environment.systemPackages = []
-# # (pkgs.waybar.overrideAttrs (oldAttrs: {
-# #     mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-# #   })
-# # )
-# # ];
+
+
 
 # #XDG portal
 # xdg.portal.enable = true;
@@ -55,5 +67,6 @@ programs.hyprland = {
 
 # #rofi keybind
 # bind = $mainMod, S, exec, rofi -show drun -show-icons
+
 
 }

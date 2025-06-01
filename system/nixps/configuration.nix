@@ -7,8 +7,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      #./virt.nix
+      #./test/virt.nix
       ./hyperland.nix
+     # ./test/waybar.nix
     ];
 
 
@@ -53,8 +54,14 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
+  ## evaluation warning: The option `services.xserver.desktopManager.gnome.enable' defined in
+  ##   `/nix/store/####-source/system/nixps/configuration.nix' has been renamed to `services.desktopManager.gnome.enable'.
+  ## evaluation warning: The option `services.xserver.displayManager.gdm.enable' defined in 
+  ##   `/nix/store/####-source/system/nixps/configuration.nix' has been renamed to `services.displayManager.gdm.enable'.
+
+  
 
   # Configure keymap in X11
   services.xserver.xkb = {
