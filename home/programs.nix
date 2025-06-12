@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  ##feet are stinky
   programs.foot = {
     enable = true;
   };
@@ -10,4 +11,10 @@
     programs.kitty = {
     enable = true;
   };
+
+##space 
+    programs.starship = {
+    enable = true;
+  };
+
 }
