@@ -17,7 +17,7 @@
       autosuggestion.enable = true;  # Enable Zsh autosuggestions
     };
 
-    pay-repects = {
+    pay-respects = {
       enable = true;                  # Enable The Fuck
       enableZshIntegration = true;    # Enable Zsh integration for The Fuck
     };
