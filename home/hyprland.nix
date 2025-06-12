@@ -20,7 +20,8 @@
         # "hyprctl setcursor Qogir 24"
       ];
 
-      monitor = [",preferred,auto,1"];
+##scale is 1  is 100 2 is 200 percent
+      monitor = [",preferred,auto,2"];
 
       general = {
         layout = "dwindle";
@@ -48,7 +49,8 @@
       bind = [
           "SUPER, Space, exec,              rofi -show drun" # application launcher
           "SUPER, RETURN, exec, foot" # terminal
-          "SUPER, RETURN, Alt_L, exec, kitty" # terminal
+          "SUPER RETURN, Alt_L, exec, kitty" # terminal
+          
           "SUPER, Q,              killactive"
 
         #   "ALT, Tab, exec,      hyprctl dispatch focuscurrentorlast; hyprctl dispatch alterzorder top"
@@ -73,6 +75,7 @@
         "SUPER, mouse:273, resizewindow"
         "SUPER, mouse:272, movewindow"
       ];
+
 
       decoration = {
         shadow = {
