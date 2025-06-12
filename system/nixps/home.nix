@@ -4,8 +4,10 @@
   ...
 }: {
   imports = [
-#    ../../home/blackbox.nix
-  
+      ../../home/hyprland.nix
+      ../../home/waybar.nix
+      ../../home/rofi.nix
+      ../../home/foot.nix
     ];
   
   
