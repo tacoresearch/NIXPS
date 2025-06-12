@@ -1,17 +1,23 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
-  # Home Manager configuration
-  home.packages = with pkgs; [ ];
+  # Home packages to install (optional)
+  home.packages = with pkgs; [
+    # You can include common packages here, for example:
+    zsh
+    thefuck
+    atuin
+    starship
+  ];
 
   # Program configurations
   programs = {
     zsh = {
       enable = true;               # Enable Zsh
-      autosuggestions.enable = true;  # Enable Zsh autosuggestions
+      autosuggestion.enable = true;  # Enable Zsh autosuggestions
     };
 
-    thefuck = {
+    pay-repects = {
       enable = true;                  # Enable The Fuck
       enableZshIntegration = true;    # Enable Zsh integration for The Fuck
     };
