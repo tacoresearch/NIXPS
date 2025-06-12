@@ -48,6 +48,7 @@
       bind = [
           "SUPER, Space, exec,              rofi -show drun" # application launcher
           "SUPER, RETURN, exec, foot" # terminal
+          "SUPER, RETURN, Alt_L, exec, kitty" # terminal
           "SUPER, Q,              killactive"
 
         #   "ALT, Tab, exec,      hyprctl dispatch focuscurrentorlast; hyprctl dispatch alterzorder top"

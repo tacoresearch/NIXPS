@@ -7,7 +7,7 @@
       ../../home/hyprland.nix
       ../../home/waybar.nix
       ../../home/rofi.nix
-      ../../home/foot.nix
+      ../../home/programs.nix
     ];
   
   
