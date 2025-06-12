@@ -1,0 +1,27 @@
+## these are magic programs greg uses for wizardry
+``It will complete shell commands and remember history if you press up
+
+Press up twice for filter mode
+
+Also at this point the error message will make a lot more sense
+
+It usually tells you where you put a bad config
+
+``
+
+programs.zsh.enable = true
+
+programs.zsh.autosuggestion.enable
+
+programs.thefuck.enableZshIntegration
+
+programs.thefuck.enable
+
+programs.atuin.enable
+
+rograms.atuin.enableZshIntegration
+
+programs.starship.enable
+
+programs.starship.enableZshIntegration
+
